@@ -1,0 +1,93 @@
+@use '../scss/variables';
+@use '../scss/reset';
+
+
+@mixin elementoFormulario() {
+    
+    padding:8px;
+    display:block;
+    width:100%;
+    border:none;
+    outline:none;
+    color:variables.$corinput;
+}
+@mixin mensagemFormulario(){
+    width:100%;
+    height:15vh;
+    border-bottom:1px solid variables.$corSegundo;
+    border-radius:15px;
+    outline:none;
+    background-color:transparent;
+    padding:20px 15px;
+    color:variables.$corSegundo;
+}
+@mixin elementoTituloform(){
+     color:#fff;
+     font-family:variables.$fontsegunda;
+     font-size:17px;
+}
+body
+{
+    background-color:variables.$cortexto;
+}
+header.cabecalhor
+{
+    width:100%;
+    padding:20px;
+    background-color:variables.$corPrimaria;
+    color:variables.$cortexto;
+}
+.container
+{
+    width:100%;
+    max-width:1024px;
+    margin:0 auto;
+}
+.formulario-container
+{
+    height:calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div.formulario
+{
+    width:500px;
+    height:600px;
+    padding:20px;
+    background-image:url("../src/imagens/img.jpg");
+    background-position: 50px right;
+    background-size: cover;
+    border-radius:20px;
+}
+.formulario {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h2{
+        @include elementoTituloform();
+    }
+    form{
+        width:100%;
+        max-width:380px;
+        margin-top:20px;
+
+        label {
+            @include elementoTituloform();
+        }
+        input {
+            @include elementoFormulario();
+            border-bottom:1px solid #EEEEEE;
+            margin-bottom:16px;
+            background-color:transparent;
+        }
+        textarea {
+             @include mensagemFormulario();
+        }
+    }
+}
+
+

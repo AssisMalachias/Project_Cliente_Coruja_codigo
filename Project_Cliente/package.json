@@ -1,0 +1,16 @@
+{
+  "name": "project_cliente",
+  "version": "1.0.0",
+  "description": "É project de criação de formulario",
+  "license": "ISC",
+  "author": "Coruja Codigo",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "sass":"sass src/scss/main.scss build/main.css --watch",
+    "test": "ClienteFormulario"
+  }
+}
